@@ -9,6 +9,8 @@ public class Main {
 
 		System.out.println(Div1.Division_double());
 		System.out.println(Div2.Division_int());
+		
+		
 	   	}
 
 }

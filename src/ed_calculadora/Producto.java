@@ -45,6 +45,11 @@ public class Producto {
 	private double num11;
 	private int num2;
 	private int num21;
+	private double num3;
+	private double num31;
+	private double num32;
+	private int base;
+	private int exponente;
 	
 	public Producto (double num1, double num11){
 		this.num1 = num1;
@@ -53,6 +58,11 @@ public class Producto {
 	public Producto (int num2, num21) {
 		this.num2 = num2;
 		this.num21 = num21;
+	}
+	public Producto (double num3, double num31, double 32) {
+		this.num3=num3;
+		this.num31=num31;
+		this.num32=num32;
 	}
 	public double getNum1() {
 		return num1;
@@ -78,6 +88,24 @@ public class Producto {
 	public void setNum21 (int num21) {
 		this.num21 = num21;
 	}
+	public double getNum3() {
+		return num3;
+	}
+	public void setNum3 (double num3) {
+		this.num3 = num3;
+	}
+	public double getNum31() {
+		return num31;
+	}
+	public void setNum31 (double num31) {
+		this.num31 = num31;
+	}
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum32 (double num32) {
+		this.num32 = num32;
+	}
 	/**
 	 * Se crea el método para calcular el producto de dos números reales.
 	 * 
@@ -86,7 +114,8 @@ public class Producto {
 	 * @return Devuelve el resultado del producto.
 	 */
 
-	public double Producto (double num1, double num11) {
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
 		return Resultado;
 	}
 
@@ -97,8 +126,10 @@ public class Producto {
 	 * @param num21 número entero que es otro de los factores.
 	 * @return Devuelve el resultado del producto de ambos factores.
 	 */
-	public int Producto (int num2, int num21) {
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
 		return Resultado;
+		
 	}
 
 	/**
@@ -109,8 +140,9 @@ public class Producto {
 	 * @param num32 número real que es el factor tres.
 	 * @return Devuelve el resultado del producto de los tres factores.
 	 */
-	public double Producto(double num3, double num31, double num32) {
-		return Resultado;
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado = num3*num31*num32;
+		return Resultado;	
 	}
 
 	/**
@@ -123,7 +155,8 @@ public class Producto {
 	 * 
 	 * @return Devuelve el resultado de la potencia.
 	 */
-	public int Potencia (int base, int exponente) {
+	public double Potencia (int base, int exponente) {
+		double Resultado = Math.pow(base, exponente);
 		return Resultado;
 	}
 }

@@ -1497,3 +1497,2028 @@ org.eclipse.core.runtime.CoreException: The Class File Viewer cannot handle the 
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 !SUBENTRY 2 org.eclipse.jdt.ui 4 996 2022-02-11 19:20:39.166
 !MESSAGE The Class File Viewer cannot handle the given input ('org.eclipse.ui.ide.FileStoreEditorInput').
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:05:46.762
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3)
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:05:46.762
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:05:46.763
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:05:49.266
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double )
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:05:49.268
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:05:49.268
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:05:51.773
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double num31)
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:05:51.774
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:05:51.774
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:05:53.794
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double num31, double)
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:05:53.794
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:05:53.794
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:05:56.802
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double num31, double )
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:05:56.802
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:05:56.802
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:05:57.806
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double num31, double 32)
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:05:57.806
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:05:57.807
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:06:02.314
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double num31, double 3
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:06:02.315
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:06:02.316
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:06:04.324
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double num31, double 32)
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:06:04.324
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:06:04.324
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-02-12 08:06:05.832
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package ed_calculadora;
+
+/**
+ * Esta clase implementará todos los métodos que están relacionados con la multiplicación de la calculadora.
+ * <br>
+ * Esta clase tendrá los siguientes métodos:
+ * <br>
+ * <b>Producto dos números reales.</b>.
+ * <br>
+ * <b>Producto dos números enteros.</b>
+ * <br>
+ * <b>Producto de tres números reales.</b>
+ * <br>
+ * <b>Potencia.</b>
+ * <br>
+ * <br>
+ * <b> Casos especiales: </b>
+ * <br>
+ * - En el caso de que <b>no se admitierán números negativos</b> habría que especificarlo al usuario 
+ *   y además utilizar un if para en el caso de que lo pusiera le indicara el método que debe ser 
+ *   un número mayor o igual que cero.
+ * <br>
+ * - En el producto <b>no pasaría nada sí </b>alguno de los parámetros fuera <b>cero</b>.
+ * <br>
+ * - En la potencia:
+ * 		1) La base es cero, el resultado es cero.
+ * 		2) Si el exponente es cero el resultado es uno.
+ *      3) Si <b>ambos son cero</b> sería una <b>indeterminación</b>.
+ * <br>
+ * - La entrada de <b>números muy grandes en la potencia </b> puede ser un problema a la hora de devolver el resultado, 
+ *   para solucionarlo, utilizaremos un while que cuando el resultado tenga más de 7 cifras, la calculadora 
+ *   muestre el número empleando la <b>notación científica</b> con la forma aEb, donde a sería el número y b el exponente 
+ *   de la base 10.
+ * <br>
+ * <ul>
+ * 
+ * 
+ * @authors Benjamin Ruiz de Casas
+ * @version 2.0
+ *
+ */
+
+public class Producto {
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public Producto (double num3, double num31, double 32) 
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
+	/**
+	 * Se crea el método para calcular el producto de dos números reales.
+	 * 
+	 * @param num1 número real que es uno de los factores.
+	 * @param num11 número real que es otro de los factores.
+	 * @return Devuelve el resultado del producto.
+	 */
+
+	public double Producto_real (double num1, double num11) {
+		double Resultado = num1*num11;
+		return System.out.println ("el resultado de multiplicar " + num1 + " por " + num11 + " es " + Resultado);
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de dos números enteros.
+	 * 
+	 * @param num2 número entero que es uno de los factores.
+	 * @param num21 número entero que es otro de los factores.
+	 * @return Devuelve el resultado del producto de ambos factores.
+	 */
+	public int Producto_entero (int num2, int num21) {
+		double Resultado = num2*num21;
+		return System.out.println ("el resultado de multiplicar " + num2 + " por " + num21 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular el producto de tres números reales.
+	 * 
+	 * @param num3 número real que es el factor uno.
+	 * @param num31 número real que es el factor dos.
+	 * @param num32 número real que es el factor tres.
+	 * @return Devuelve el resultado del producto de los tres factores.
+	 */
+	public double Producto_triple (double num3, double num31, double num32) {
+		double Resultado_triple = num3*num31*num32;
+		return System.out.println ("el resultado de multiplicar " + num3 + " por " + num31 + " y por " + num32 + " es " + Resultado);
+		
+	}
+
+	/**
+	 * Se crea el método para calcular la potencia de un número.
+	 * 
+	 * @param base número entero o real que representa la base de la potencia.
+	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * 
+	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
+	 * 
+	 * @return Devuelve el resultado de la potencia.
+	 */
+	public int Potencia (int base, int exponente) {
+		return Resultado;
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-02-12 08:06:05.832
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-02-12 08:06:05.832
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3263)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:521)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:112)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
