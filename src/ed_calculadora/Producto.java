@@ -41,7 +41,43 @@ package ed_calculadora;
  */
 
 public class Producto {
-
+	private double num1;
+	private double num11;
+	private int num2;
+	private int num21;
+	
+	public Producto (double num1, double num11){
+		this.num1 = num1;
+		this.num11 = num11;
+	}
+	public Producto (int num2, num21) {
+		this.num2 = num2;
+		this.num21 = num21;
+	}
+	public double getNum1() {
+		return num1;
+	}
+	public void setNum1 (double num1) {
+		this.num1 = num1;
+	}
+	public double getNum11() {
+		return num1;
+	}
+	public void setNum11 (double num11) {
+		this.num1 = num11;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2 (int num2) {
+		this.num2 = num2;
+	}
+	public int getNum21() {
+		return num2;
+	}
+	public void setNum21 (int num21) {
+		this.num21 = num21;
+	}
 	/**
 	 * Se crea el método para calcular el producto de dos números reales.
 	 * 
