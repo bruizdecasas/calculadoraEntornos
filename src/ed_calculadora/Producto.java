@@ -41,122 +41,123 @@ package ed_calculadora;
  */
 
 public class Producto {
-	private double num1;
-	private double num11;
-	private int num2;
-	private int num21;
-	private double num3;
-	private double num31;
-	private double num32;
-	private int base;
-	private int exponente;
+	private double num1r;
+	private double num2r;
+	private double num3r;
+	private int num1e;
+	private int num2e;
+    
 	
-	public Producto (double num1, double num11){
-		this.num1 = num1;
-		this.num11 = num11;
+	public Producto (double num1r, double num2r) {
+		
+		this.num1r = num1r;
+		this.num2r = num2r;
+		
 	}
-	public Producto (int num2, num21) {
-		this.num2 = num2;
-		this.num21 = num21;
+	
+	public Producto (int num1e, int num2e) {
+	this.num1e = num1e;
+	this.num2e = num2e;
+	
 	}
-	public Producto (double num3, double num31, double 32) {
-		this.num3=num3;
-		this.num31=num31;
-		this.num32=num32;
+	
+	public Producto (double num1r, double num2r, double num3r) {
+		this.num1r = num1r;
+		this.num2r = num2r;
+		this.num3r = num3r;
+		}
+	
+		
+	public double getNum1r() {
+		return num1r;
 	}
-	public double getNum1() {
-		return num1;
+
+	public void setNum1r(double num1r) {
+		this.num1r = num1r;
 	}
-	public void setNum1 (double num1) {
-		this.num1 = num1;
+
+	public double getNum2r() {
+		return num2r;
 	}
-	public double getNum11() {
-		return num1;
+
+	public void setNum2r(double num2r) {
+		this.num2r = num2r;
 	}
-	public void setNum11 (double num11) {
-		this.num1 = num11;
+	public double getNum3r() {
+		return num3r;
 	}
-	public int getNum2() {
-		return num2;
+
+	public void setNum3r(double num3r) {
+		this.num3r = num3r;
 	}
-	public void setNum2 (int num2) {
-		this.num2 = num2;
+	public int getNum1e() {
+		return num1e;
 	}
-	public int getNum21() {
-		return num2;
+
+	public void setNum1e(int num1e) {
+		this.num1e = num1e;
 	}
-	public void setNum21 (int num21) {
-		this.num21 = num21;
+
+	public int getNum2e() {
+		return num2e;
 	}
-	public double getNum3() {
-		return num3;
+
+	public void setNum2e(int num2e) {
+		this.num2e = num2e;
 	}
-	public void setNum3 (double num3) {
-		this.num3 = num3;
-	}
-	public double getNum31() {
-		return num31;
-	}
-	public void setNum31 (double num31) {
-		this.num31 = num31;
-	}
-	public double getNum1() {
-		return num1;
-	}
-	public void setNum32 (double num32) {
-		this.num32 = num32;
-	}
+	
 	/**
 	 * Se crea el método para calcular el producto de dos números reales.
+	 * Añado el método Math.round para no permitir más de tres cifras decimales en el resultado
 	 * 
-	 * @param num1 número real que es uno de los factores.
-	 * @param num11 número real que es otro de los factores.
+	 * @param num1r número real que es uno de los factores.
+	 * @param num2r número real que es otro de los factores.
 	 * @return Devuelve el resultado del producto.
 	 */
 
-	public double Producto_real (double num1, double num11) {
-		double Resultado = num1*num11;
-		return Resultado;
+	public double Producto_real () {
+		double Resultado = num1r*num2r;
+		return Math.round(Resultado*1000.0)/1000.0;
 	}
 
 	/**
 	 * Se crea el método para calcular el producto de dos números enteros.
 	 * 
-	 * @param num2 número entero que es uno de los factores.
-	 * @param num21 número entero que es otro de los factores.
+	 * @param num1e número entero que es uno de los factores.
+	 * @param num2e número entero que es otro de los factores.
 	 * @return Devuelve el resultado del producto de ambos factores.
 	 */
-	public int Producto_entero (int num2, int num21) {
-		double Resultado = num2*num21;
-		return Resultado;
-		
+	public int Producto_entero () {
+		int Resultado = num1e*num2e;
+		return Resultado;	
 	}
 
 	/**
 	 * Se crea el método para calcular el producto de tres números reales.
+	 * Añado el método Math.round para no permitir más de tres cifras decimales en el resultado
 	 * 
-	 * @param num3 número real que es el factor uno.
-	 * @param num31 número real que es el factor dos.
-	 * @param num32 número real que es el factor tres.
+	 * @param num1r número real que es el factor uno.
+	 * @param num2r número real que es el factor dos.
+	 * @param num3r número real que es el factor tres.
 	 * @return Devuelve el resultado del producto de los tres factores.
 	 */
-	public double Producto_triple (double num3, double num31, double num32) {
-		double Resultado = num3*num31*num32;
-		return Resultado;	
+	public double Producto_triple () {
+		double Resultado = num1r*num2r*num3r;
+		return Math.round(Resultado*1000.0)/1000.0;	
 	}
 
 	/**
 	 * Se crea el método para calcular la potencia de un número.
 	 * 
-	 * @param base número entero o real que representa la base de la potencia.
-	 * @param exponente número entero o real que representa el exponente de la potencia.
+	 * @param num1e número entero que representa la base de la potencia.
+	 * @param num2e número entero que representa el exponente de la potencia.
 	 * 
 	 * @throws - La base y el exponente no pueden ser cero simultáneamente.
 	 * 
 	 * @return Devuelve el resultado de la potencia.
 	 */
-	public double Potencia (int base, int exponente) {
-		double Resultado = Math.pow(base, exponente);
+	public double Potencia () {
+		double Resultado = Math.pow(num1e, num2e);
 		return Resultado;
 	}
 }

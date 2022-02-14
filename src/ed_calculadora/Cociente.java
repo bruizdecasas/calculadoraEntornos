@@ -54,6 +54,11 @@ public class Cociente {
 	
 	}
 	
+	public Cociente (double num1r) {
+		this.num1r = num1r;
+		
+		}
+	
 		
 	public double getNum1r() {
 		return num1r;

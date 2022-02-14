@@ -37,9 +37,6 @@ public class Sumar {
 	  private int num1e;
 	  private int num2e;
 	  
-	  private double Acumulador = 0; 
-	  
-	  
 	  public Sumar (double num1r, double num2r) {
 		  this.num1r = num1r;
 		  this.num2r = num2r;
@@ -54,9 +51,6 @@ public class Sumar {
 		  this.num2r = num2r;
 		  this.num3r = num3r;
 		  
-	  }
-	  public Sumar (double Acumulador) {
-		  this.Acumulador = Acumulador;
 	  }
 	  public double getNum1r() {
 		  return num1r;
@@ -87,12 +81,7 @@ public class Sumar {
 	  public void setNum2e() {
 		  
 	  }
-	  public double getAcumulador() {
-		  return Acumulador;
-	  }
-	  public void setAcumulador() {
-		  
-	  }
+	
 	/**
 	 * Este metodo suma dos números reales.
 	 * 
@@ -101,12 +90,9 @@ public class Sumar {
 	 * @return Devuelve un número real que es la suma de ambos parámetros.
 	 * 
 	 * @author Benjamin Ruiz de Casas, Diego García Rodriguez, Silvia Piñel Fañanas.
-	 * Se utiliza un acumulador para ir sumando los resultados 
-	 *
 	 */
 		public double Suma_Reales (double num1r, double num2r) {
 				  double Resultado = num1r + num2r;
-				  Acumulador= Resultado + Acumulador;
 				  return Resultado;
 				}	
 	/**
@@ -124,7 +110,6 @@ public class Sumar {
 	 */
 		public int Suma_Enteros (int num1e, int num2e) {
 			int Resultado = num1e + num2e;
-			Acumulador = Resultado + Acumulador;
 			return Resultado;
 		}
 
@@ -144,8 +129,25 @@ public class Sumar {
 	 */
 		public double Suma_Tres_Reales (double num1r, double num2r,double num3r) {			
 			double Resultado = num1r + num2r + num3r;
-			Acumulador = Resultado + Acumulador;
 			return Resultado;
+		}
+	/**
+	* Este metodo suma los distintos resultados de las sumas realizadas.
+	* 
+	* Tiene un parámetro de entrada:
+	* 
+	* @param num1 es un número real que actúa como acumulador.
+	* 
+	* La variable acumulador se inicia en 0.
+	* 
+	* @author Benjamin Ruiz de Casas, Diego García Rodriguez, Silvia Piñel Fañanas.
+	*/
+		
+		public void Acumular(double num1) {
+			int Acumulador = 0;
+			Acumulador++;
+			
+			
 		}
 
 }
